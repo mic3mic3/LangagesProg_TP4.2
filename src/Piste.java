@@ -19,6 +19,8 @@ public class Piste {
 		nbrTours = 0;
 	}
 	
+	// Après un certain nombre de tours à être présent sur la piste,
+	// un avion est déplacé au hangar.
 	private boolean avionPretPourAllerAuHangar()
 	{
 		return nbrTours >= MAX_TOURS_SUR_PISTE;
