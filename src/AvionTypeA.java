@@ -2,7 +2,7 @@
 public class AvionTypeA extends Avion {
 
 	public AvionTypeA() {
-		super(1);
+		super(5);
 	}
 	
 	public String getNom()

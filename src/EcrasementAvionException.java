@@ -29,7 +29,6 @@ public class EcrasementAvionException extends Exception {
 	public String getMessage()
 	{
 		return super.getMessage();
-		
 	}
 
 }
