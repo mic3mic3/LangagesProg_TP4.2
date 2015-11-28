@@ -5,6 +5,19 @@ public abstract class Avion {
 	// Propriétés
 	private int quantiteEssence;
 	private String numeroSerie;
+	private static int prochainNumeroSerie = 0;
+	
+	public Avion()
+	{
+		this.quantiteEssence = 10;
+		numeroSerie = Integer.toString(prochainNumeroSerie++);
+	}
+	
+	public Avion(int quantiteEssence)
+	{
+		this.quantiteEssence = quantiteEssence;
+		numeroSerie = Integer.toString(prochainNumeroSerie++);
+	}
 
 	// Méthodes
 
@@ -12,9 +25,7 @@ public abstract class Avion {
 		return "(NS:" + numeroSerie + ", ESS:" + quantiteEssence + ")" + this.getNom();
 	}
 
-	public String getNom() {
-		return ""; // À implémenter
-	}
+	public abstract String getNom();
 
 	public String getNumeroSerie() {
 		return numeroSerie;

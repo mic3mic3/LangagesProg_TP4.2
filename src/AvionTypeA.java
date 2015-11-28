@@ -2,7 +2,7 @@
 public class AvionTypeA extends Avion {
 
 	public AvionTypeA() {
-		// TODO Auto-generated constructor stub
+		super(5);
 	}
 	
 	public String getNom()
