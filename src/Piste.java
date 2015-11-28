@@ -69,7 +69,10 @@ public class Piste {
 		// pour lequel il peut être présent sur la piste,
 		// on le retire de la piste (on supprime l'objet).
 		if(this.avionPretPourAllerAuHangar())
+		{
 			avion = null;
+			nbrTours = 0;
+		}
 	}
 
 }
