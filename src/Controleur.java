@@ -9,8 +9,6 @@ public class Controleur {
 	
 	public static void main(String[] args)
 	{
-		
-		
 		Controleur controleur = new Controleur();
 		try
 		{
@@ -34,11 +32,14 @@ public class Controleur {
 	
 	private void afficherEntete()
 	{
-		
+		System.out.println("Par Mathieu Bérubé et Michaël Déry");
 	}
 	
 	private void afficherStatutSimulation()
 	{
+		// Affichage spécial pour les captures d'écran.
+		afficherEntete();
+		
 		// Affichage des avions en vol
 		tourControle.afficherAvionsEnVol();
 		
