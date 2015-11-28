@@ -1,5 +1,6 @@
-
 public class EcrasementAvionException extends Exception {
+
+	private static final long serialVersionUID = -7289442053499903484L;
 
 	public EcrasementAvionException() {
 		// TODO Auto-generated constructor stub
@@ -27,7 +28,8 @@ public class EcrasementAvionException extends Exception {
 	
 	public String getMessage()
 	{
-		return "Erreur: " + this.toString();
+		return super.getMessage();
+		
 	}
 
 }

@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public abstract class Avion {
 
 	// Propriétés
@@ -22,7 +20,7 @@ public abstract class Avion {
 	// Méthodes
 
 	public String getDescription() {
-		return "(NS:" + numeroSerie + ", ESS:" + quantiteEssence + ")" + this.getNom();
+		return "(NS:" + numeroSerie + ", ESS:" + quantiteEssence + ") " + this.getNom();
 	}
 
 	public abstract String getNom();
@@ -38,6 +36,6 @@ public abstract class Avion {
 	public void diminuerQuantiteEssence(int quantite) throws EcrasementAvionException {
 		quantiteEssence -= quantite;
 		if (quantiteEssence <= 0)
-			throw new EcrasementAvionException("L'avion " + numeroSerie + " s'est écrasé!");
+			throw new EcrasementAvionException("L'avion " + getDescription() + " s'est ecrasee!");
 	}
 }

@@ -9,9 +9,6 @@ public class Controleur {
 	
 	public static void main(String[] args)
 	{
-		System.out.println("Départ");
-		//Aeroport aeroport = new Aeroport();
-		
 		Controleur controleur = new Controleur();
 		
 		try

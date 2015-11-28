@@ -1,5 +1,4 @@
 import java.lang.System;
-import java.math.*;
 public class Ciel extends Thread {
 	
 	private LieuAtterrissage lieuAtterrissage;

@@ -51,6 +51,11 @@ public class Aeroport implements TourControle, LieuAtterrissage {
 		{
 			avion.diminuerQuantiteEssence(QUANTITE_ESSENCE_UTILISEE_PAR_TOUR);
 		}
+		for (Piste piste : pistes)
+		{
+			piste.update();
+		}
+		
 	}
 	
 	public void faireAtterrirAvion(String noAvion, String noPiste)  throws EcrasementAvionException

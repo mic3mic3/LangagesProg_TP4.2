@@ -2,7 +2,7 @@
 public class AvionTypeC extends Avion {
 
 	public AvionTypeC() {
-		super(10);
+		super(1);
 	}
 	
 	public String getNom()
