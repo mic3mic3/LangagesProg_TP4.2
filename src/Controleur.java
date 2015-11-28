@@ -77,11 +77,18 @@ public class Controleur {
 			}
 			else if(choix.compareTo("2") == 0)
 			{
-				System.out.println("Fonctionnalité pas encore implémentée.");
+				// Obtention de l'avion à faire atterrir et sur quel piste.
+				System.out.println("Entrer le noSerie de l'avion :");
+				String numeroAvion = scanner.nextLine();
+				System.out.println("Entrer le no de la piste :");
+				String numeroPiste = scanner.nextLine();
+				
+				// Tentative d'atterrissage.
+				tourControle.faireAtterrirAvion(numeroAvion, numeroPiste);
 			}
 			else
 			{
-				System.out.println("Entrée invalide.");
+				simulationTerminee = true;
 			}
 		}
 		

@@ -39,6 +39,11 @@ public class Piste {
 		return description;
 	}
 	
+	public int getNumero()
+	{
+		return numero;
+	}
+	
 	public void setAvion(Avion value) throws EcrasementAvionException
 	{
 		if(this.contientAvion())
