@@ -24,13 +24,10 @@ public abstract class Avion {
 		return _quantiteEssence;
 	}
 	
-	public void diminuerQuantiteEssence(int quantite)
-	{
-		int bidon = 0;
-		
-		int valeurFinale = _quantiteEssence - quantite;
-		if(valeurFinale < 0)
-			bidon = 0; // TODO: Lancer exception
-		_quantiteEssence = valeurFinale;
+	public void diminuerQuantiteEssence(int quantite) throws EcrasementAvionException
+	{		
+		_quantiteEssence = quantite;
+		if(_quantiteEssence <= 0)
+			throw new EcrasementAvionException("L'avion " + _numeroSerie + " s'est écrasé!");
 	}
 }
