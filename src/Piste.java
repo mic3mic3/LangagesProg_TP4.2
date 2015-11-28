@@ -19,6 +19,16 @@ public class Piste {
 		nbrTours = 0;
 	}
 	
+	private boolean avionPretPourAllerAuHangar()
+	{
+		return nbrTours >= MAX_TOURS_SUR_PISTE;
+	}
+	
+	public boolean contientAvion()
+	{
+		return avion != null;
+	}
+	
 	public String getDescription()
 	{
 		String description = "(" + Integer.toString(numero) + ") ";
@@ -27,6 +37,32 @@ public class Piste {
 		else
 			description += "Occupé: " + avion.getDescription() + "(" + Integer.toString(this.nbrTours) + "/" + Integer.toString(MAX_TOURS_SUR_PISTE) + ")";	
 		return description;
+	}
+	
+	public void setAvion(Avion value) throws EcrasementAvionException
+	{
+		if(this.contientAvion())
+			throw new EcrasementAvionException();
+		
+		avion = value;
+	}
+	
+	// Update qui se fait à chaque tour.
+	public void update()
+	{
+		// S'il n'y a pas d'avion sur la piste, rien à faire.
+		if(this.contientAvion() == false)
+			return;
+		
+		// On incrémente le nombre de tours depuis lequel
+		// l'avion est présent sur la piste.
+		++nbrTours;
+		
+		// Si l'avion a atteint le nombre maximal de tours
+		// pour lequel il peut être présent sur la piste,
+		// on le retire de la piste (on supprime l'objet).
+		if(this.avionPretPourAllerAuHangar())
+			avion = null;
 	}
 
 }
