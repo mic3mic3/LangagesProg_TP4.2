@@ -21,8 +21,13 @@ public class Controleur {
 	private void afficherStatutSimulation()
 	{
 		// Affichage des avions en vol
+		//for(Avion avion:aeroport.getAvionList())
+		//{
+			//System.out.print(avion.getDescription() + "\n");
+		//}
 		
 		// Affichage des pistes
+		
 	}
 	
 	// Affichage le menu principal au contrôleur et retourne son option choisie.
