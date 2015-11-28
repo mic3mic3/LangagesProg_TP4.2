@@ -1,6 +1,8 @@
 
 public class Piste {
 
+	public final int MAX_TOURS_SUR_PISTE = 5;
+	
 	private Avion avion;
 	private int nbrTours;
 	private int numero;
@@ -22,7 +24,7 @@ public class Piste {
 		if(avion == null)
 			return "Libre";
 		
-		return "Occupé: " + avion.getDescription();		
+		return "Occupé: " + avion.getDescription() + "(" + Integer.toString(this.nbrTours) + "/" + Integer.toString(MAX_TOURS_SUR_PISTE) + ")";		
 	}
 
 }
