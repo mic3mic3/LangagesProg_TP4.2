@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 public class Aeroport implements TourControle, LieuAtterrissage {
 	Piste[] pistes;
@@ -8,13 +9,18 @@ public class Aeroport implements TourControle, LieuAtterrissage {
 		pistes[0] = new Piste(1);
 		pistes[1] = new Piste(2);
 		pistes[2] = new Piste(3);
+		avions = new ArrayList<Avion>();
 		ciel = new Ciel(this);
 		ciel.start();		
 	}
 	
 	public void survoler(Avion avion)
 	{
-		
+		avions.add(avion);
+		for(Avion a : avions)
+		{
+			System.out.println(a.getDescription());
+		}	
 	}
 	
 	public void afficherAvionsEnVol()

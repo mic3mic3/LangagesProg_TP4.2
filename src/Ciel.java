@@ -45,8 +45,6 @@ public class Ciel extends Thread {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-			System.out.println(nouvelAvion.getClass().getName());
 			lieuAtterrissage.survoler(nouvelAvion);
 			try
 		    { 
