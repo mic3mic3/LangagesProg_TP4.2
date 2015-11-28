@@ -19,12 +19,6 @@ public class Aeroport implements TourControle, LieuAtterrissage {
 	public void survoler(Avion avion)
 	{
 		avions.add(avion);
-		//System.out.println("****************************");
-		//for(Avion a : avions)
-		//{
-		//	System.out.println(a.getDescription());
-		//}
-		//System.out.println("****************************");
 	}
 	
 	public void afficherAvionsEnVol()
@@ -91,7 +85,6 @@ public class Aeroport implements TourControle, LieuAtterrissage {
 		// Validation du numéro de piste (numéro valide)
 		int indexPiste;
 		boolean pisteTrouvee = false;
-		int test = pistes.length;
 		for(indexPiste = 0; indexPiste < pistes.length && pisteTrouvee == false;)
 		{
 			if(pistes[indexPiste].getNumero() == noPisteInt)

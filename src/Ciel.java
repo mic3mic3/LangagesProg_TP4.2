@@ -17,6 +17,8 @@ public class Ciel extends Thread {
 		{
 			Avion nouvelAvion = null;
 			String avionClassName = null;
+			
+			//Génération d'une avion au hasard parmi les 3 types
 			int random = (int)(Math.random() * 3) + 1;
 			switch (random)
 			{
@@ -33,6 +35,7 @@ public class Ciel extends Thread {
 			}
 			
 			try {
+				//Instanciation dynamique grâce à la class Class
 				nouvelAvion = (Avion) Class.forName(avionClassName).newInstance();
 			} catch (InstantiationException e) {
 				// TODO Auto-generated catch block
@@ -44,51 +47,19 @@ public class Ciel extends Thread {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			lieuAtterrissage.survoler(nouvelAvion);
+			
+			lieuAtterrissage.survoler(nouvelAvion); //Mettre l'avion dans l'aéroport
+			
+			//Sleep
 			try
 		    { 
 		       Thread.sleep(5000); 
 		    } 
-		    catch (InterruptedException  interruptedException) 
+		    catch (InterruptedException  interruptedException) //Si interruption pendant le sleep
 		    { 
 		      System.out.println(interruptedException); 
 		    }
 		}
-	}
-
-	public Ciel(Runnable arg0) {
-		super(arg0);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Ciel(String arg0) {
-		super(arg0);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Ciel(ThreadGroup arg0, Runnable arg1) {
-		super(arg0, arg1);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Ciel(ThreadGroup arg0, String arg1) {
-		super(arg0, arg1);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Ciel(Runnable arg0, String arg1) {
-		super(arg0, arg1);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Ciel(ThreadGroup arg0, Runnable arg1, String arg2) {
-		super(arg0, arg1, arg2);
-		// TODO Auto-generated constructor stub
-	}
-
-	public Ciel(ThreadGroup arg0, Runnable arg1, String arg2, long arg3) {
-		super(arg0, arg1, arg2, arg3);
-		// TODO Auto-generated constructor stub
 	}
 
 }

@@ -2,12 +2,12 @@
 public class AvionTypeA extends Avion {
 
 	public AvionTypeA() {
-		super(5);
+		super(5); //Essence
 	}
 	
 	public String getNom()
 	{
-		return "Salty-69";
+		return "Salty-25";
 	}
 
 }

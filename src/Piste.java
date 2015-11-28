@@ -35,7 +35,7 @@ public class Piste {
 		if(avion == null)
 			description += "Libre";
 		else
-			description += "Occupé: " + avion.getDescription() + "(" + Integer.toString(this.nbrTours) + "/" + Integer.toString(MAX_TOURS_SUR_PISTE) + ")";	
+			description += "Occupé: " + avion.getDescription() + " (" + Integer.toString(this.nbrTours) + "/" + Integer.toString(MAX_TOURS_SUR_PISTE) + " tours)";	
 		return description;
 	}
 	
