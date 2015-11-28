@@ -16,5 +16,21 @@ public class Aeroport implements TourControle, LieuAtterrissage {
 	{
 		
 	}
+	
+	public void afficherAvionsEnVol()
+	{
+		for(Avion avion : avions)
+		{
+			System.out.println(avion.getDescription());
+		}
+	}
+	
+	public void afficherStatutPistes()
+	{
+		for(int index = 0; index < pistes.length; index++)
+		{
+			
+		}
+	}
 
 }

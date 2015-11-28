@@ -12,21 +12,22 @@ public class Controleur {
 		System.out.println("Départ");
 		Aeroport aeroport = new Aeroport();
 		
-		//Controleur controleur = new Controleur();
-		//controleur.lancerSimulation();
+		Controleur controleur = new Controleur();
+		controleur.lancerSimulation();
 		
-		//scanner.close();
+		scanner.close();
 	}
+	
+	// Propriétés
+	private TourControle _tourControle;
 	
 	private void afficherStatutSimulation()
 	{
 		// Affichage des avions en vol
-		//for(Avion avion:aeroport.getAvionList())
-		//{
-			//System.out.print(avion.getDescription() + "\n");
-		//}
+		_tourControle.afficherAvionsEnVol();
 		
 		// Affichage des pistes
+		_tourControle.afficherStatutPistes();
 		
 	}
 	
@@ -34,12 +35,12 @@ public class Controleur {
 	private String demanderInputMenuPrincipal()
 	{
 		// Affichage des choix possibles au contrôleur.
-		System.out.print("***************************************************\n" +
+		System.out.println("***************************************************\n" +
 							"1) Faire survoler les avions\n" +
 							"2) Faire atterrir un avion\n" +
 							"0) Fin de la journee de travail!\n" +
 							"***************************************************\n" +
-							"Votre choix?\n");
+							"Votre choix?");
 		
 		// Obtention du choix du contrôleur.
 		return scanner.nextLine();
@@ -47,7 +48,7 @@ public class Controleur {
 	
 	private void lancerSimulation()
 	{
-		Controleur controleur = new Controleur();
+		_tourControle = new Aeroport();
 		String choix = "";
 		boolean simulationTerminee = false;
 		while(simulationTerminee == false)
@@ -59,15 +60,19 @@ public class Controleur {
 			}
 			else if(choix.compareTo("1") == 0)
 			{
-				
+				afficherStatutSimulation();
+			}
+			else if(choix.compareTo("2") == 0)
+			{
+				System.out.println("Fonctionnalité pas encore implémentée.");
 			}
 			else
 			{
-				System.out.print("Entrée non gérée.\n");
+				System.out.println("Entrée invalide.");
 			}
 		}
 		
-		System.out.print("Fin de la journée de travail!\n");
+		System.out.println("Fin de la journée de travail!");
 	}
 
 }
