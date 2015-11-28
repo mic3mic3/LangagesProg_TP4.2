@@ -21,10 +21,12 @@ public class Piste {
 	
 	public String getDescription()
 	{
+		String description = "(" + Integer.toString(numero) + ") ";
 		if(avion == null)
-			return "Libre";
-		
-		return "Occupé: " + avion.getDescription() + "(" + Integer.toString(this.nbrTours) + "/" + Integer.toString(MAX_TOURS_SUR_PISTE) + ")";		
+			description += "Libre";
+		else
+			description += "Occupé: " + avion.getDescription() + "(" + Integer.toString(this.nbrTours) + "/" + Integer.toString(MAX_TOURS_SUR_PISTE) + ")";	
+		return description;
 	}
 
 }

@@ -25,6 +25,7 @@ public class Aeroport implements TourControle, LieuAtterrissage {
 	
 	public void afficherAvionsEnVol()
 	{
+		System.out.println("Avions en survol");
 		for(Avion avion : avions)
 		{
 			System.out.println(avion.getDescription());
@@ -33,6 +34,7 @@ public class Aeroport implements TourControle, LieuAtterrissage {
 	
 	public void afficherStatutPistes()
 	{
+		System.out.println("Etat des pistes");
 		for(int index = 0; index < pistes.length; index++)
 		{
 			System.out.println(pistes[index].getDescription());
