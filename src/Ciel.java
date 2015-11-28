@@ -11,7 +11,6 @@ public class Ciel extends Thread {
 	{
 		while (true)
 		{
-			System.out.println("Ciel");
 			try
 		    { 
 		       Thread.sleep(1000); 
