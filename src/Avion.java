@@ -9,16 +9,28 @@ public class Avion {
 	
 	// Propriétés
 	private int _quantiteEssence;
+	private String _numeroSerie;
+	
+	
+	// Méthodes
+	
+	public String getNumeroSerie()
+	{
+		return _numeroSerie;
+	}
+	
 	public int getQuantiteEssence()
 	{
 		return _quantiteEssence;
 	}
 	
-	public void setQuantiteEssence(int value)
+	public void diminuerQuantiteEssence(int quantite)
 	{
-		_quantiteEssence = value;
+		int bidon = 0;
+		
+		int valeurFinale = _quantiteEssence - quantite;
+		if(valeurFinale < 0)
+			bidon = 0; // TODO: Lancer exception
+		_quantiteEssence = valeurFinale;
 	}
-	
-	
-	// Méthodes
 }
