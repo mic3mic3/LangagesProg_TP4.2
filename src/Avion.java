@@ -1,11 +1,6 @@
+import java.util.Scanner;
+
 public abstract class Avion {
-	// Temporaire, le temps d'ajouter toutes les classes.
-	// Aller dans Run>Run configurations>Java application et
-	// modifier la classe où se trouve le main.
-	public static void main(String[] args)
-	{
-		System.out.println("test");
-	}
 	
 	// Propriétés
 	private int _quantiteEssence;
@@ -13,6 +8,16 @@ public abstract class Avion {
 	
 	
 	// Méthodes
+	
+	public String getDescription()
+	{
+		return "(NS:" + _numeroSerie + ", ESS:" + _quantiteEssence + ")" + this.getNom();
+	}
+	
+	public String getNom()
+	{
+		return ""; // À implémenter
+	}
 	
 	public String getNumeroSerie()
 	{
