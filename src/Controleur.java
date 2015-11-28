@@ -77,8 +77,8 @@ public class Controleur {
 			}
 			else if(choix.compareTo("1") == 0)
 			{
-				afficherStatutSimulation();
 				tourControle.faireSurvolerAvions();
+				afficherStatutSimulation();
 			}
 			else if(choix.compareTo("2") == 0)
 			{
