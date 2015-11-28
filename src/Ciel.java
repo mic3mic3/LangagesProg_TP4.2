@@ -50,7 +50,7 @@ public class Ciel extends Thread {
 			lieuAtterrissage.survoler(nouvelAvion);
 			try
 		    { 
-		       Thread.sleep(1000); 
+		       Thread.sleep(5000); 
 		    } 
 		    catch (InterruptedException  interruptedException) 
 		    { 
