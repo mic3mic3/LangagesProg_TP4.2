@@ -10,16 +10,19 @@ public class Controleur {
 	public static void main(String[] args)
 	{
 		System.out.println("Départ");
-		Aeroport aeroport = new Aeroport();
+		//Aeroport aeroport = new Aeroport();
 		
 		Controleur controleur = new Controleur();
 		controleur.lancerSimulation();
 		
 		scanner.close();
+		System.exit(0);
 	}
 	
 	// Propriétés
 	private TourControle _tourControle;
+	
+	// Méthodes 
 	
 	private void afficherStatutSimulation()
 	{

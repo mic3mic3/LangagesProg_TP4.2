@@ -16,5 +16,13 @@ public class Piste {
 		this.numero = numero;
 		nbrTours = 0;
 	}
+	
+	public String getDescription()
+	{
+		if(avion == null)
+			return "Libre";
+		
+		return "Occupé: " + avion.getDescription();		
+	}
 
 }
