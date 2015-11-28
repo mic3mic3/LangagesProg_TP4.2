@@ -85,7 +85,7 @@ public class Controleur {
 			}
 			else
 			{
-				simulationTerminee = true;
+				System.out.println("Entrée invalide.");
 			}
 		}
 		
