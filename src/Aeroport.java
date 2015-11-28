@@ -63,10 +63,12 @@ public class Aeroport implements TourControle, LieuAtterrissage {
 		// Validation du numéro d'avion
 		int indexAvion;
 		boolean avionTrouve = false;
-		for(indexAvion = 0; indexAvion < avions.size() && avionTrouve == false; indexAvion++)
+		for(indexAvion = 0; indexAvion < avions.size() && avionTrouve == false;)
 		{
 			if(avions.get(indexAvion).getNumeroSerie().compareTo(noAvion) == 0)
 				avionTrouve = true;
+			else
+				++indexAvion;
 		}
 		if(avionTrouve == false)
 		{
