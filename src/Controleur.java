@@ -18,8 +18,9 @@ public class Controleur {
 		catch(EcrasementAvionException e)
 		{
 			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
-		
+		System.out.println("Fin de la journée de travail!");
 		
 		scanner.close();
 		System.exit(0);
@@ -88,8 +89,7 @@ public class Controleur {
 				System.out.println("Entrée invalide.");
 			}
 		}
-		
-		System.out.println("Fin de la journée de travail!");
+
 	}
 
 }
