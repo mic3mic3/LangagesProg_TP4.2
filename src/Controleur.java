@@ -13,24 +13,33 @@ public class Controleur {
 		//Aeroport aeroport = new Aeroport();
 		
 		Controleur controleur = new Controleur();
-		controleur.lancerSimulation();
+		
+		try
+		{
+			controleur.lancerSimulation();
+		}
+		catch(EcrasementAvionException e)
+		{
+			System.out.println(e.getMessage());
+		}
+		
 		
 		scanner.close();
 		System.exit(0);
 	}
 	
 	// Propriétés
-	private TourControle _tourControle;
+	private TourControle tourControle;
 	
 	// Méthodes 
 	
 	private void afficherStatutSimulation()
 	{
 		// Affichage des avions en vol
-		_tourControle.afficherAvionsEnVol();
+		tourControle.afficherAvionsEnVol();
 		
 		// Affichage des pistes
-		_tourControle.afficherStatutPistes();
+		tourControle.afficherStatutPistes();
 		
 	}
 	
@@ -49,9 +58,9 @@ public class Controleur {
 		return scanner.nextLine();
 	}
 	
-	private void lancerSimulation()
+	private void lancerSimulation()  throws EcrasementAvionException
 	{
-		_tourControle = new Aeroport();
+		tourControle = new Aeroport();
 		String choix = "";
 		boolean simulationTerminee = false;
 		while(simulationTerminee == false)
@@ -64,6 +73,7 @@ public class Controleur {
 			else if(choix.compareTo("1") == 0)
 			{
 				afficherStatutSimulation();
+				tourControle.faireSurvolerAvions();
 			}
 			else if(choix.compareTo("2") == 0)
 			{

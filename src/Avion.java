@@ -36,7 +36,7 @@ public abstract class Avion {
 	}
 
 	public void diminuerQuantiteEssence(int quantite) throws EcrasementAvionException {
-		quantiteEssence = quantite;
+		quantiteEssence -= quantite;
 		if (quantiteEssence <= 0)
 			throw new EcrasementAvionException("L'avion " + numeroSerie + " s'est écrasé!");
 	}

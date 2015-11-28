@@ -17,10 +17,12 @@ public class Aeroport implements TourControle, LieuAtterrissage {
 	public void survoler(Avion avion)
 	{
 		avions.add(avion);
-		for(Avion a : avions)
-		{
-			System.out.println(a.getDescription());
-		}	
+		//System.out.println("****************************");
+		//for(Avion a : avions)
+		//{
+		//	System.out.println(a.getDescription());
+		//}
+		//System.out.println("****************************");
 	}
 	
 	public void afficherAvionsEnVol()
@@ -39,6 +41,18 @@ public class Aeroport implements TourControle, LieuAtterrissage {
 		{
 			System.out.println(pistes[index].getDescription());
 		}
+	}
+	
+	public void faireSurvolerAvions()  throws EcrasementAvionException
+	{
+		for(Avion avion : avions)
+		{
+			avion.diminuerQuantiteEssence(1);
+		}
+	}
+	
+	public void faireAtterrirAvion()  throws EcrasementAvionException
+	{
 	}
 
 }
