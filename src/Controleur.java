@@ -8,8 +8,7 @@ public class Controleur {
 	public static void main(String[] args)
 	{
 		System.out.println("Départ");
-		Ciel ciel = new Ciel();
-		ciel.start();
+		Aeroport aeroport = new Aeroport();
 	}
 
 }

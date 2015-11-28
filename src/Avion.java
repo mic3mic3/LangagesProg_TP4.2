@@ -1,5 +1,3 @@
-public class Avion {
-
 public abstract class Avion {
 	// Temporaire, le temps d'ajouter toutes les classes.
 	// Aller dans Run>Run configurations>Java application et
