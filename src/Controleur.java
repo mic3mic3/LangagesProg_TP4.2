@@ -4,13 +4,14 @@ public class Controleur {
 
 	static Scanner scanner = new Scanner(System.in);	
 	public Controleur() {
-		// TODO Auto-generated constructor stub
+
 	}
 	
 	public static void main(String[] args)
 	{
-		Controleur controleur = new Controleur();
 		
+		
+		Controleur controleur = new Controleur();
 		try
 		{
 			controleur.lancerSimulation();
@@ -30,6 +31,11 @@ public class Controleur {
 	private TourControle tourControle;
 	
 	// Méthodes 
+	
+	private void afficherEntete()
+	{
+		
+	}
 	
 	private void afficherStatutSimulation()
 	{
@@ -83,6 +89,8 @@ public class Controleur {
 				
 				// Tentative d'atterrissage.
 				tourControle.faireAtterrirAvion(numeroAvion, numeroPiste);
+				
+				afficherStatutSimulation();
 			}
 			else
 			{
