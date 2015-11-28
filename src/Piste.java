@@ -47,7 +47,7 @@ public class Piste {
 	public void setAvion(Avion value) throws EcrasementAvionException
 	{
 		if(this.contientAvion())
-			throw new EcrasementAvionException();
+			throw new EcrasementAvionException("Écrasement! Il y a eu collision entre l'avion " + avion.getDescription() + " et l'avion " + value.getDescription());
 		
 		avion = value;
 	}
