@@ -1,8 +1,29 @@
-
+import java.lang.System;
 public class Ciel extends Thread {
+	
+	private LieuAtterrissage lieuAtterrissage;
 
 	public Ciel() {
 		// TODO Auto-generated constructor stub
+	}
+	
+	public void run()
+	{
+		while (true)
+		{
+			System.out.println("Ciel");
+			try
+		    { 
+		       Thread.sleep(1000); 
+		    } 
+		    catch (InterruptedException  interruptedException) 
+		    { 
+		      /*Interrupted exception will be thrown when a sleeping or  waiting 
+		      * thread is interrupted. 
+		      */
+		      System.out.println(interruptedException); 
+		    }
+		}
 	}
 
 	public Ciel(Runnable arg0) {
